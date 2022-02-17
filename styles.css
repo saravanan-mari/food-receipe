@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    background: #1e130c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #9a8478, #1e130c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #9a8478, #1e130c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+img{
+    max-width: 100%;
+}
+
+.mobile-container{
+   background-color: white;
+   width: 400px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+    background-color: #9a8478;
+}
+header input{
+    border-radius: 3px;
+    border-color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+header button {
+    margin-left: 0.5rem;
+    background: transparent;
+    border: none;
+    color:white;
+    font-size: 1rem;
+    transition: transform 400ms ease-in-out;
+}
+
+header button :hover{
+    transform: scale(1.1);
+    color: #1e130c;
+}
+
+.favourites{
+    text-align: center;
+    padding: 1rem 1rem; 
+    background-color: antiquewhite;
+}
+.favourites h1{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 0.5rem;
+    
+}
+.fav-list{
+    display: flex;
+    list-style-type: none;
+    padding: 0;  
+    overflow: auto;  
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.fav-list li{
+    width: 85px;
+    margin-right: 10px;
+    position: relative;
+}
+.clear i{
+    color: #1e130c;
+}
+.fav-list li .clear{
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    top: 0rem;
+    right: 0.3rem;
+    border: none;
+    background: transparent;
+    font-size: 0.9rem;
+
+}
+.fav-list li:hover .clear{
+    opacity: 1;
+}
+.fav-list li img {
+    height: 70px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 10px 2px #3333331A ;
+    
+}
+
+.fav-list span{
+    font-size:1rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 70px;
+    display: inline-block
+}
+
+.fav-list span:hover{
+    
+    text-decoration: underline;
+}
+
+
+
+.meals{
+    margin: 1.5rem;
+    box-shadow: 0 0 10px 2px #1e130c ;
+    border-radius: 3px;
+    
+}
+
+.meals-header{
+    position: relative;
+}
+
+.meals-header .random{
+     position: absolute;
+     top: 10px;
+     background-color: white;
+     padding: 0.25rem 0.5rem;
+     margin-left: 1rem;;
+     border-radius: 3px;
+     
+}
+
+.meals-header img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    
+
+}
+
+.meals-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    
+}
+
+.meals-body h1{
+    margin: 0;
+    font-size: medium;
+    cursor: pointer;
+}
+.meals-body h1:hover{
+    text-decoration: underline;
+}
+
+.meals-body .fav-btn{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: #9a8478;
+}
+.meals-body .fav-btn:hover{
+    border: 0.5px solid #1e130c;
+}
+.meals-body .fav-btn.active{
+    color: rgb(255, 0, 140);
+}
+
+.mealInfoContainer{
+    
+    background: transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: center;
+    background: #1e130c;
+    
+}
+
+.popup {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0 2rem;
+    position: relative;
+    overflow: auto;
+    max-height: 100vh;
+    max-width: 600px;
+    width: 100%;
+
+}
+
+
+.hidden{
+    pointer-events: none;
+    opacity: 0;
+}
+.popup .closeUp{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: transparent;
+    border: none;
+    color: red;
+    font-size: 2rem;
+    cursor: pointer;
+
+}
+
+ .meal-info h1,h3{
+    text-align: center;
+    padding: 1rem;  
+    text-transform: uppercase;  
+}
+
+.meal-info p{
+    text-align: justify;
+    margin-top: 1rem;
+    font-weight: 800;
+    
+} 
+
+.meal-info ul li{
+    font-weight: 800;
+}
+

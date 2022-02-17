@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <title>Receipe</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script src="script.js" defer>
+        </script>
+    </head>
+    <body>
+        <div class="mobile-container">
+            <header>
+                <input type="search" placeholder="search..."  id="searchBar">
+                <button id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </header>
+            <div class="favourites">
+                <h1>Favourate meals</h1>
+                    <ul class="fav-list" id="fav-meals">
+                                   
+                    </ul>
+            </div>
+            <div class="meals-container" id="mealz"></div>
+            
+        </div>
+        <div class="mealInfoContainer hidden" id="popUp-info">
+            <div class="popup">
+                <button class="closeUp" id="closeUp"> 
+                    <i class="fa fa-xmark"></i>
+                </button>
+                <div class="meal-info" id="meal-info"></div>
+            </div>
+        </div>
+    </body>
+</html>
