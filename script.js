@@ -5,6 +5,11 @@ const searchBtn = document.getElementById("search");
 const closeUpBtn = document.getElementById("closeUp");
 const popUpContent = document.getElementById("popUp-info");
 const mealInfoE1 = document.getElementById("meal-info");
+
+getRandomMeal();
+fetchFavMeals();
+
+
 async function getRandomMeal(){
     const response = await  fetch(
         "https://www.themealdb.com/api/json/v1/1/random.php"
@@ -32,8 +37,7 @@ async function getMealById(id) {
 
     return meal;
 }
-getRandomMeal();
-fetchFavMeals();
+
 
 function addRandomMeal(dataMeal , random = false){
 
@@ -70,7 +74,7 @@ function addRandomMeal(dataMeal , random = false){
     });
     meals_container.appendChild(meal);
     const popupHead = document.querySelector(".meals-body h1");
-    popupHead.addEventListener( "click", () =>{
+    meal.addEventListener( "click", () =>{
         showPopUp(dataMeal);
     });
 }
